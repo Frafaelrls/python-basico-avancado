@@ -21,10 +21,10 @@ essa função.
 e o valor.
 """
 
-a = 10.5  # tipo flout
-b = 5  # tipo int
-c = 'Texto'  # tipo string
-print(a + b)
+casa = 10.5  # tipo flout
+mesa = 5  # tipo int
+cadeira = 'Texto'  # tipo string
+print(casa + mesa )
 
 """
 Comentários
@@ -66,5 +66,24 @@ print(3 != 2)  # Diferente de
 print(3 == 3)  # Igual que
 print(2 == '2')  # Igual que
 
-
+""" 
+Operadores de atribuição
+"""
+a = 3
+a = a + 7
+print(a)
+a += 5  # Atribuição somativa a = a +5
+print(a)
+a -= 3  # Atribuição subtrativa a = a - 3
+print(a)
+a *= 2  # Atribuição multiplicativa a = a * 2
+print(a)
+a /= 4  # Atribuição divisiva a = a / 4
+print(a)
+a %= 4  # Atribuição modular a = |a / 4|
+print(a)
+a **= 8  # Atribuição de potenciação a = a^8
+print(a)
+a //= 256  # Divisão obtendo resultados inteiros
+print(a)
 

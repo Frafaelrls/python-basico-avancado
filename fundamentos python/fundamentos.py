@@ -24,7 +24,7 @@ e o valor.
 casa = 10.5  # tipo flout
 mesa = 5  # tipo int
 cadeira = 'Texto'  # tipo string
-print(casa + mesa )
+print(casa + mesa)
 
 """
 Comentários
@@ -86,4 +86,93 @@ a **= 8  # Atribuição de potenciação a = a^8
 print(a)
 a //= 256  # Divisão obtendo resultados inteiros
 print(a)
+
+"""
+Operadores Lógicos
+"""
+
+print(True or False)  # True
+print(7 != 3 and 2 > 3)  # False
+
+# Tabela verdade do and
+print(True and True)  # True
+print(True and False)  # False
+print(False and True)  # False
+print(False and False)  # False
+
+# Tabela verdade do or
+
+print(True or True)  # True
+print(True or False)  # True
+print(False or True)  # True
+print(False or False)  # False
+
+# Tabela verdade do xor
+# Por não possuir um operador para a função "ou exclusivo" foi usado "!=".
+# O uso do '!=' não faz parte das boas praticas de programação.
+
+print(True != True)  # False
+print(True != False)  # True
+print(False != True)  # True
+print(False != False)  # False
+
+# Operador de Negação (unário)
+
+print(not True)  # False
+print(not False)  # True
+print(not 0)  # True
+print(not 1)  # False
+
+# Cuidado!
+# Fica atendo quanto ao uso dos operadores não confundir com operadores bit
+# a bit como os listados a baixo.
+
+print(True & True)  # True and True = True
+print(True | True)  # True or True = True
+print(True ^ True)  # True xor True = False
+
+# Em bit a bit a comparação é realizada em binário, transforma-se o numero
+# para binário e é realizada a comparação.
+# Deve-se ter atenção no momento do uso não utilizar o bit a bit quando for
+# necessário usar os operadores lógicos ou o inverso.
+
+# and bit a bit
+# print(3 & 2)
+# 3 = 11
+# 2 = 10
+# R = 10 R= resultado
+# Conforme o exemplo acima,comparando cada bit retornando o 2 (10 em binário)
+
+# or bit a bit
+# print(3 | 2)
+# 3 = 11
+# 2 = 10
+# R = 11 R= resultado
+# Conforme o exemplo acima, o resultado é 3 (11 em binário)
+
+# xor bit a bit
+# print(3 ^ 2)
+# 3 = 11
+# 2 = 10
+# R = 01 R= resultado
+# Conforme o exemplo acima, o resultado é 1 (01 em binário)
+
+# Um pouco de realidade
+# Calculando se o usuário deixou mais de 20% de saldo
+
+saldo = 1000
+salario = 4000
+despesas = 2970
+
+# Usando operadores lógicos
+saldo_positivo = saldo > 0
+despesas_controladas = salario - despesas > 0.2 * salario
+meta_logica = saldo_positivo and despesas_controladas
+print(f"Resultado usando operadores lógicos = {meta_logica}")
+
+# Usando operadores bit a bit
+saldo_positivo = saldo > 0
+despesas_controladas = salario - despesas > 0.2 * salario
+meta_bit = saldo_positivo & despesas_controladas
+print(f"Resultado usando operadores bit a bit = {meta_bit}")
 

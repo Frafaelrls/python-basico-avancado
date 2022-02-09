@@ -52,3 +52,19 @@ print(9.4 / 3)  # Divisão
 print(9.4 // 3)  # Divisão com o resultado apenas com números inteiros
 print(2 ** 8)  # Exponenciação
 print(10 % 3)  # Modulo 'Restante da divisão'
+
+"""
+Operadores relacionais
+- Faz a comparação entre dois operandos e as respostas obtidas sempre vão ser 
+'True' ou 'False'
+"""
+print(4 > 3)  # Maior que
+print(4 >= 3)  # Maior ou igual que
+print(1 < 2)  # Menor que
+print(3 <= 1)  # Menor ou igual que
+print(3 != 2)  # Diferente de
+print(3 == 3)  # Igual que
+print(2 == '2')  # Igual que
+
+
+

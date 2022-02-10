@@ -187,3 +187,16 @@ print(-b)  # Transforma o valor da variável em positivo
 print(not 0)
 print(not 1)  # Valores acima de zero são true
 
+"""
+Operadores Ternário
+
+É o momento em que temos três operandos para uma sentença
+
+"""
+
+esta_chovendo = True
+# Na linha a seguir se a variável for verdadeira será considerado o operando
+# mais próximo dela como resultado.
+print("Hoje estou com roupas " + ("secas.", "molhadas.")[esta_chovendo])
+print("Hoje estou com roupas " + ("molhadas." if esta_chovendo else "secas."))
+

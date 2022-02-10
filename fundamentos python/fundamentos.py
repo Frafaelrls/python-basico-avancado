@@ -200,3 +200,41 @@ esta_chovendo = True
 print("Hoje estou com roupas " + ("secas.", "molhadas.")[esta_chovendo])
 print("Hoje estou com roupas " + ("molhadas." if esta_chovendo else "secas."))
 
+"""
+Operadores de Membros e Identidade
+"""
+
+# Operador de membro
+lista = [1, 2, 3, 'Ana', 'Carla']
+print(2 in lista)  # Dois está na lista? True - Dois está presente
+print('Ana' not in lista)  # Ana não está na lista. False - Ana está presente
+
+# Operador de Identidade
+
+x = 3
+y = x
+z = 3
+
+print(x is y)  # x é y? True
+print(y is z)  # y é z? True
+print(x is not z)  # x não é z. False
+
+lista_a = [1, 2, 3]
+lista_b = lista_a
+lista_c = [1, 2, 3]
+
+print(lista_a is lista_b)  # Lista A é a Lista B? True
+print(lista_b is lista_c)  # Lista B é a Lista C? False
+
+"""No exemplo que utiliza as listas elas vão ser diferentes por ocuparem um 
+espaço diferente de memória, cada lista vai está em um espaço, quando 
+criamos a lista A é colocado 3 valores em um espaço de memória e quando 
+falamos que a Lista B é igual a lista A, definimos que aquela variável 
+possui os mesmo valores que se encontram naquele espaço de memória; Quando 
+definimos a lista C é colocado 3 valores em um outro espaço de memória, 
+mesmo que os valores armazenados sejam idênticos as listas são consideradas 
+diferentes por estarem em espaços de memória diferente
+ Se alterarmos colocando ou retirando os valores na lista A será modificado 
+ na lista A e B; Se alterarmos na lista C será alterado apenas na lista C
+ 
+"""

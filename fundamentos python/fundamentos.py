@@ -176,3 +176,14 @@ despesas_controladas = salario - despesas > 0.2 * salario
 meta_bit = saldo_positivo & despesas_controladas
 print(f"Resultado usando operadores bit a bit = {meta_bit}")
 
+"""
+Operadores Unários
+
+São operadores que trabalham com apenas um operando
+"""
+
+b = -3
+print(-b)  # Transforma o valor da variável em positivo
+print(not 0)
+print(not 1)  # Valores acima de zero são true
+

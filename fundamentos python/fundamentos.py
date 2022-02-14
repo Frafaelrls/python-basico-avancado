@@ -317,3 +317,77 @@ soma e um dos modos que temos é fazer a conversão do tipo 'str' para 'int'.
 
 print(1 + int('2'))
 
+"""
+*** Coerção Automática ***
+
+Em alguns momentos o python fará a conversão das variáveis de forma 
+automática; durante a divisão de números inteiros vamos ver essa conversão 
+acontecendo.
+
+x = 10 / 2
+print(x)
+print(type(x))
+
+5.0
+<class 'float'>
+
+Na linguagem python mesmo que o resultado de uma divisão seja um número inteiro
+ele será convertido para 'float'; 
+
+Em uma conversão onde queremos como resultado apenas os números inteiros 
+usando o comando '//' e utilizamos um numero do tipo float, o python irá 
+apresentar o resultado como do tipo 'float' como visto a baixo; 
+
+z = 10 // 3.3
+print(z)
+print(type(z))
+
+3.0
+<class 'float'>
+
+Com o uso da limitação de resultados através do '//' faremos o uso apenas 
+de números do tipo 'int';
+
+t = 10 // 3
+print(t)
+print(type(t))
+
+3
+<class 'int'>
+
+Nesse momento recebemos um resultado do tipo 'int', devido a exclusão de 
+números decimais e o trabalho apenas com números inteiros, o python não faz 
+a conversão do resultado para o tipo 'flout'.
+
+Outro momento que ocorre a coerção automática é durante a soma de dois números
+de tipos diferentes; prevalecendo o tipo 'float'.
+
+y = 2 + 2.0
+print(y)
+print(type(y))
+
+4.0
+<class 'float'>
+
+As variáveis do tipo 'float' são capazes de armazenar mais dados que as
+variáveis do tipo 'int', podemos concluir que as variáveis do tipo 'float' 
+possuem uma dominância sobre as do tipo 'int', fazendo com que em operações 
+com os dois tipos podemos antecipar que o resultado será do tipo 'float' 
+devido a dominância. 
+ 
+"""
+x = 10 / 2
+print(x)
+print(type(x))
+
+y = 2 + 2.0
+print(y)
+print(type(y))
+
+z = 10 // 3.3
+print(z)
+print(type(z))
+
+t = 10 // 3
+print(t)
+print(type(t))

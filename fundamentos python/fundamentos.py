@@ -263,9 +263,57 @@ de uso do comando 'print', seguindo os passos abaixo.
 
 help(print)
 
-Deixando sem um argumento entre parenteses, você poderá buscar por outros 
+Deixando sem um argumento entre parênteses, você poderá buscar por outros 
 comandos que sejam do seu interesse, digitando diretamente no terminal os 
-nomes dos comandos, para finalizar o programa após pequisas, basta colocar 
+nomes dos comandos, para finalizar o programa após pesquisas, basta colocar 
 o comando 'quit'.
    
 """
+
+"""
+*** Conversão de tipos ***
+
+Podemos fazer a conversão de tipos usando funções presentes no builtins; 
+algumas das funções que podemos utilizar são:
+    str() - Converte para string
+    int() - Converte para integer
+    flout() - Converte para floating
+
+Para o uso colocamos o que queremos converter dentro dos parênteses.
+
+x = '3'
+print(int(x))
+ 
+Devemos está atentos quanto aos valores a serem convertidos e as limitações; 
+Uma conversão de string para int dever-se usar partes textos que podem 
+ser transformados em um numero inteiro.
+
+x = '4 texto'
+print(int(x))
+
+No exemplo acima será apresentado o seguinte erro 'ValueError', o python não 
+será capaz de transformar o texto em um numero inteiro da base 10; por esse 
+motivo devemos está atendo quanto ao texto que queremos converter. 
+
+A linguagem Python não fará adivinhações no que queremos fazer, devemos ser 
+explícitos quando a criação da lógica. No exemplo abaixo temos um má uso de 
+mistura de tipos diferentes, que gerará o erro 'TypeError;
+
+print(1 + '2')
+
+Por estarmos tentando fazer uma operação entre uma variável do tipo int e 
+uma do tipo str o python não irá tentar adivinhar o que queremos fazer, 
+devemos ser explícitos nos nosso pedidos. Um método de correção desse erro é o
+uso das conversões através das funções.
+
+print(1 + int('2'))
+
+Vemos acima um modo de deixarmos explicito o nosso desejo, com isso 
+retiramos as possibilidades que estavam em aberto, sendo elas a soma das 
+duas variáveis ou a concatenação das duas variáveis, como a linguagem Python 
+não faz a escolhas, devemos deixar explicito para ele que queremos efetuar a 
+soma e um dos modos que temos é fazer a conversão do tipo 'str' para 'int'.   
+"""
+
+print(1 + int('2'))
+

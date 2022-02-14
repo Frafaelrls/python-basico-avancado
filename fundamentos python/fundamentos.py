@@ -230,14 +230,42 @@ lista_c = [1, 2, 3]
 print(lista_a is lista_b)  # Lista A é a Lista B? True
 print(lista_b is lista_c)  # Lista B é a Lista C? False
 
-"""No exemplo que utiliza as listas elas vão ser diferentes por ocuparem um 
+"""
+No exemplo que utiliza as listas elas vão ser diferentes por ocuparem um 
 espaço diferente de memória, cada lista vai está em um espaço, quando 
 criamos a lista A é colocado 3 valores em um espaço de memória e quando 
 falamos que a Lista B é igual a lista A, definimos que aquela variável 
 possui os mesmo valores que se encontram naquele espaço de memória; Quando 
 definimos a lista C é colocado 3 valores em um outro espaço de memória, 
 mesmo que os valores armazenados sejam idênticos as listas são consideradas 
-diferentes por estarem em espaços de memória diferente
- Se alterarmos colocando ou retirando os valores na lista A será modificado 
- na lista A e B; Se alterarmos na lista C será alterado apenas na lista C.
+diferentes por estarem em espaços de memória diferente.
+Se alterarmos colocando ou retirando os valores na lista A será modificado 
+na lista A e B; Se alterarmos na lista C será alterado apenas na lista C.
+"""
+
+"""
+*** Builtins ***
+
+É um módulo interno do python que disponibiliza algumas funções para o uso 
+no dia a dia da programação, como por exemplo as funções 'print', 'str', 
+'type', 'vars'... e as demais; para poder ter acesso as outras funções 
+disponíveis nesse módulo basta usar o comando a seguir.
+
+print(dir(__builtins__))
+
+Uma outra função que pode ser utilizada para aprendizado é a função help, 
+a partir dela será possível buscar informações sobre os comandos utilizados 
+na linguagem python.
+
+Com esse comando será disponibilizado durante a execução do programa um a 
+documentação das funções. Um exemplo de uso, pode-se buscar pela descrição 
+de uso do comando 'print', seguindo os passos abaixo.
+
+help(print)
+
+Deixando sem um argumento entre parenteses, você poderá buscar por outros 
+comandos que sejam do seu interesse, digitando diretamente no terminal os 
+nomes dos comandos, para finalizar o programa após pequisas, basta colocar 
+o comando 'quit'.
+   
 """

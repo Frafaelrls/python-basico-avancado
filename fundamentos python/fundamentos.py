@@ -1,5 +1,6 @@
 """
-Sentença de código
+*** Sentença de código ***
+
 - Deve-se respeitar a indentação como as quebras de linhas dos comandos e
 padrões de programação predefinidas.
 - Deve-se ficar atento ao espaçamento durante o uso de comandos.
@@ -14,7 +15,8 @@ print('Concatenar o' + 2 * ' texto')  # concatenação do texto usando '+'
 # print(2 + 'muito')  # Em caso de ambiguidade o programa não será rodado
 
 """
-Variáveis
+*** Variáveis ***
+
 - Em python não é necessário definir o tipo da variável o interpretador fará 
 essa função.
 - Atribuição de variáveis deve-se ter o identificador, o simbolo de atribuição
@@ -27,7 +29,8 @@ cadeira = 'Texto'  # tipo string
 print(casa + mesa)
 
 """
-Comentários
+*** Comentários ***
+
 - Devem ser usado acima da linha do código que será comentado
 - Um programa que possui muitos comentários pode ser considerado um 
 programa criado sem o uso de boas praticas
@@ -38,7 +41,7 @@ comentários.
 """
 
 """
-Operadores aritméticos
+*** Operadores aritméticos ***
 
 - São considerados como operadores binários; estruturalmente são montados 
 com um operando, um operador e um segundo operando (1 + 1).
@@ -54,7 +57,8 @@ print(2 ** 8)  # Exponenciação
 print(10 % 3)  # Modulo 'Restante da divisão'
 
 """
-Operadores relacionais
+*** Operadores relacionais ***
+
 - Faz a comparação entre dois operandos e as respostas obtidas sempre vão ser 
 'True' ou 'False'
 """
@@ -67,7 +71,7 @@ print(3 == 3)  # Igual que
 print(2 == '2')  # Igual que
 
 """ 
-Operadores de atribuição
+*** Operadores de atribuição ***
 """
 a = 3
 a = a + 7
@@ -88,7 +92,7 @@ a //= 256  # Divisão obtendo resultados inteiros
 print(a)
 
 """
-Operadores Lógicos
+*** Operadores Lógicos ***
 """
 
 print(True or False)  # True
@@ -177,7 +181,7 @@ meta_bit = saldo_positivo & despesas_controladas
 print(f"Resultado usando operadores bit a bit = {meta_bit}")
 
 """
-Operadores Unários
+*** Operadores Unários ***
 
 São operadores que trabalham com apenas um operando
 """
@@ -188,7 +192,7 @@ print(not 0)
 print(not 1)  # Valores acima de zero são true
 
 """
-Operadores Ternário
+*** Operadores Ternário ***
 
 É o momento em que temos três operandos para uma sentença
 
@@ -201,7 +205,7 @@ print("Hoje estou com roupas " + ("secas.", "molhadas.")[esta_chovendo])
 print("Hoje estou com roupas " + ("molhadas." if esta_chovendo else "secas."))
 
 """
-Operadores de Membros e Identidade
+*** Operadores de Membros e Identidade ***
 """
 
 # Operador de membro
@@ -235,6 +239,5 @@ definimos a lista C é colocado 3 valores em um outro espaço de memória,
 mesmo que os valores armazenados sejam idênticos as listas são consideradas 
 diferentes por estarem em espaços de memória diferente
  Se alterarmos colocando ou retirando os valores na lista A será modificado 
- na lista A e B; Se alterarmos na lista C será alterado apenas na lista C
- 
+ na lista A e B; Se alterarmos na lista C será alterado apenas na lista C.
 """

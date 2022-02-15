@@ -443,7 +443,7 @@ Podemos verificar através da função dir() quais são as funções de cada tip
     
     Temos acima a representação da fração (x) sua representação em 'float 
     (y) e por fim sua representação em binário (z); a representação em 
-    binario retorna uma dizima periódica; Quando realizamos operações com os 
+    binário retorna uma dizima periódica; Quando realizamos operações com os 
     números do tipo float as maquinas atuais ira trabalhará com uma 
     aproximação de 53 bits contando do mais significativo na base 2.
     
@@ -475,7 +475,3 @@ Podemos verificar através da função dir() quais são as funções de cada tip
     apresentados.
            
 """
-
-
-
-

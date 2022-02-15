@@ -7,6 +7,8 @@ padrões de programação predefinidas.
 - É comumente usado uma sentença por linha
 - Recomenda-se respeitar o limite de 79 carácteres por linha conforme a pep 8
 """
+import math
+
 print('Hello World')
 print(True)  # Tipo boolean, colocar com letra maiúscula
 print(2 + 3)  # Operação aritmética
@@ -391,3 +393,89 @@ print(type(z))
 t = 10 // 3
 print(t)
 print(type(t))
+
+"""
+*** Tipos numéricos ***
+
+Podemos verificar através da função dir() quais são as funções de cada tipo.
+
+- int()  
+    Números do tipo int são os números inteiros, a sigla vem do inglês 
+    'integer' que significa 'inteiro' em português.       
+- float()
+    Números do tipo float são os números decimais, a sigla vem do floating 
+    point ou ponto flutuante em português.
+    
+    Em algumas operações do tipo 'float' vamos obter resultados que não são 
+    esperados.
+    
+    print(1.1 + 2.2)
+    
+    3.3000000000000003
+    
+    Esse resultado é apresentado devido a forma padrão de modelo de 
+    implementação interna de operações aritméticas usadas pelas linguagens 
+    de programação. 
+    
+    Os números do tipo 'float' são representados no hardware dos computadores 
+    como decimais binários.
+    
+    x = 0.125
+    y = 1 / 10 + 2 / 100 + 5 / 100  
+    z = 0.001
+    w = 0 / 2 + 0 / 4 + 1 / 8
+    
+    x == y
+    y == z
+    z == w
+    
+    No exemplo acima temos a representação do mesmo número, nos dois 
+    primeiros momentos (x e y) temos a representação na base 10 e nos dois 
+    últimos momentos (z e w) temos a representação do número na base 2.
+    
+    Nessas representações vão ocorrer momentos que uma fração não pode ser 
+    representada exatamente como uma fração de base 2, quando realizamos a 
+    conversão encontraremos como resultado uma dizima periódica.
+    
+    X= 1/10 
+    y= 0.1
+    z= 0.0001100110011001100110011001100110011001100110011...
+    
+    Temos acima a representação da fração (x) sua representação em 'float 
+    (y) e por fim sua representação em binário (z); a representação em 
+    binario retorna uma dizima periódica; Quando realizamos operações com os 
+    números do tipo float as maquinas atuais ira trabalhará com uma 
+    aproximação de 53 bits contando do mais significativo na base 2.
+    
+    Devido essa aproximação teremos algumas operações que retornarão um 
+    resultado diferente do esperado, devido ao nível de precisão utilizado.
+    
+    print(0.1 + 0.1 + 0.1 == 0.3)
+    False
+    
+    A comparação entre as somas e o resultado acima, será 'False', devido a 
+    precisão de valores e a dizima periódica na base 2.
+    
+    Em casos onde podemos trabalhar com uma precisão menor, podemos utilizar a
+    função 'format()' para representar um número limitado de casas decimais.
+    
+    x = math.pi
+    y = math.pi
+    
+    print(f'x= {x}')
+
+    y = format(y, '.3f')
+    print(f'y= {y}')
+    
+    x= 3.141592653589793
+    y= 3.142
+    
+    Os valores apresentados com o uso do 'format' terão os decimais 
+    limitados na sua apresentação visual e arredondando os valores 
+    apresentados.
+           
+"""
+
+
+
+

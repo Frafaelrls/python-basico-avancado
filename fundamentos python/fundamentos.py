@@ -475,3 +475,28 @@ Podemos verificar através da função dir() quais são as funções de cada tip
     apresentados.
            
 """
+
+""""
+*** Tipo String ***
+
+Podemos verificar através da função dir() quais são as funções de cada tipo.
+
+Podemos acessar partes da variável do tipo 'string', utilizando o índice de 
+posicionamento dos carácteres.
+
+    x = 'Pedro Paulo'
+    print(x[0])
+
+    p
+
+As strings são imutáveis, se fizermos a tentativa de alteração de um dos 
+caracteres, será retornado um erro de tipo, avisando que objetos do tipo 
+string não suportam atribuição
+
+    x = 'Paulo Pedro'
+    # Tentativa de atribuição
+    x[0] = 'S'
+    print(x[0])
+
+    TypeError: 'str' object does not support item assignment
+"""

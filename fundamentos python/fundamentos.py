@@ -599,7 +599,7 @@ confundirmos com parte do texto.
     ullam auctor finibus aliquet.
 
 
-No exemplo a cima, a segunda recorrência da palavra 'nullam' perde o 'n' 
+No exemplo acima, a segunda recorrência da palavra 'nullam' perde o 'n' 
 quando usamos o comando print, isso por que o Python compreendeu que ele seria 
 parte do comando para quebra de linha e não uma parte do texto, devemos está 
 atentos durante o uso do comando '\t'; para efetuar a correção, 
@@ -658,7 +658,53 @@ for usada para iniciar a string deve ser usada para fechar;
 Durante o uso do modelo acima notamos que o resultado é apresentado da mesma 
 forma que no programa, o que retira a necessidade do uso de comandos 
 especiais para quebras de linhas por exemplo.
+
+Utilizando operador membro com strings. Podemos utilizar para verificarmos 
+se existe um determinado valor em uma string;
+
+
+    frase = 'Python é uma linguagem excelente.'
+    print('py' in frase)
+    False
+
+
+A função acima procurou pelas letras 'py' retornando False devido ela não 
+ter encontrado um resultado exatamente igual ao pedido, nesse caso com o 'p' 
+em letra minuscula.
+
+
+    frase = 'Python é uma linguagem excelente.'
+    print('Ex' not in frase)
+    True
+
+
+Podemos verificar a quantidade de caracteres que existe em uma string usando a 
+função 'len()'. 
+
+
+    frase = 'Python é uma linguagem excelente.'
+    print(len(frase))
+    33
+    
+Usando o operador '.split' é possível separar o conteúdo da string usando um 
+padrão definido.
+
+
+    frase = 'Python é uma linguagem excelente.'
+    print(frase.split())
+    ['Python', 'é', 'uma', 'linguagem', 'excelente.']
+    
+ 
+Como visto acima se não fornecermos um dado de referência para a separação 
+por padrão será considerado os espaços entre os caracteres; Logo a baixo 
+temos o mesmo comando utilizando como referência a letra 'e'.
+
+    
+    frase = 'Python é uma linguagem excelente.'
+    print(frase.split('e')) 
+    ['Python é uma linguag', 'm ', 'xc', 'l', 'nt', '.']
+
+
+Percebemos que após a separação não recebemos como resultado a letra 'e'.
 """
 
-x = '1234567890'
-print(x[::-1])

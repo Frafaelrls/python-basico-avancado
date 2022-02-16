@@ -490,7 +490,69 @@ posicionamento dos carácteres.
 
     p
 
+Podemos acessar também utilizando a contagem inversa de posições, para isso 
+basta fornecer um número negativo;
 
+
+x = 'Pedro Paulo'
+    print(x[-2])
+
+    l
+
+
+Para acessarmos em um intervalo utilizamos o dois pontos (:) para definir 
+como será recebido os resultados.
+
+
+     x = 'Pedro Rafael'
+     
+     # Para acessar os elementos iniciando a partir da posição 6 e indo até 
+     o final.
+     
+     print(x[6:])
+     Rafael
+     
+     # Para acessar a partir do final, usando números negativos.
+     
+     print(x[-5:])
+     Rafael
+     
+     # Saindo do início e parando em um índice. Nesse caso a posição 5 é 
+     excludente, o valor salvo na posição 5 não será considerado.
+     
+     print(x[:5])
+     Pedro
+     
+     print(x[:4])
+     Pedr
+     
+     # Definindo o ponto de inicio e final do intervalo.
+     
+     print(x[6:12])
+     Rafael
+     
+Podemos aprimorar essa busca por intervalo adicionando 'passos', que são 
+comandos que definiram como os valores serão apresentados.
+
+    x = '1234567890'
+    
+    # Buscando os valores intercalados de 2 em 2 em todo intervalo da string.
+    
+    print(x[::2])     
+    13579
+    
+    # Limitando o inicio de busca do intervalo.
+    
+    print(x[1::2])
+    24680 
+    
+    # Invertendo uma string, indo do final até o começo usando um passo 
+    negativo; podendo trabalhar buscando valores intercalados.
+    
+    print(x[::-1])
+    0987654321  
+    
+    
 As strings são imutáveis, se fizermos a tentativa de alteração de um dos 
 caracteres, será retornado um erro de tipo, avisando que objetos do tipo 
 string não suportam atribuição
@@ -597,3 +659,6 @@ Durante o uso do modelo acima notamos que o resultado é apresentado da mesma
 forma que no programa, o que retira a necessidade do uso de comandos 
 especiais para quebras de linhas por exemplo.
 """
+
+x = '1234567890'
+print(x[::-1])

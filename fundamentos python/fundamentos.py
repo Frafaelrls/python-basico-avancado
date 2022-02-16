@@ -484,14 +484,17 @@ Podemos verificar através da função dir() quais são as funções de cada tip
 Podemos acessar partes da variável do tipo 'string', utilizando o índice de 
 posicionamento dos carácteres.
 
+
     x = 'Pedro Paulo'
     print(x[0])
 
     p
 
+
 As strings são imutáveis, se fizermos a tentativa de alteração de um dos 
 caracteres, será retornado um erro de tipo, avisando que objetos do tipo 
 string não suportam atribuição
+
 
     x = 'Paulo Pedro'
     # Tentativa de atribuição
@@ -499,4 +502,98 @@ string não suportam atribuição
     print(x[0])
 
     TypeError: 'str' object does not support item assignment
+
+
+Para a manipulação de textos com múltiplas linhas, podemos usar alguns 
+comandos presentes na função 'str';
+    \n = Nova linha, o interpretador considerará que após esse comando o 
+         texto deve ser apresentado em uma nova linha.   
+    \t = Tabular, será feito a tabulação do texto após o comando.
+    '\' = Quebra de linha,esse comando (contra barra, alt + 92 em teclados 
+          americanos) será usado durante a programação, ele não afetara como a
+          string será apresentada para o usuário, será usada para deixar o 
+          programa com um visual melhor; Conforme a PEP 8 recomenda-se o limite
+          de 79 caracteres por linha de código,para que isso seja possível, 
+          usa-se a contra barra para mostrar que a string continua na próxima
+          linha.
+          
+          Exemplo:
+          x = "Lorem ipsum dolor sit amet, consectetur adipiscing elit." \ 
+              "Phasellus a lacus orci."
+           
+          Deve-se fechar com aspas o local onde será feito a partição da string
+          logo após adicionamos a contra barra e é dada a continuidade da 
+          string abrindo e fechando as aspas.
+    
+Devemos está atentos quando ao uso dos caracteres especiais para não 
+confundirmos com parte do texto.
+
+
+    x = 'Nullam facilisis turpis ut placerat dictum; \nullam auctor finibus ' \
+    'aliquet.'
+    print(x)
+    
+    Nullam facilisis turpis ut placerat dictum; 
+    ullam auctor finibus aliquet.
+
+
+No exemplo a cima, a segunda recorrência da palavra 'nullam' perde o 'n' 
+quando usamos o comando print, isso por que o Python compreendeu que ele seria 
+parte do comando para quebra de linha e não uma parte do texto, devemos está 
+atentos durante o uso do comando '\t'; para efetuar a correção, 
+basta repetir a letra 'n'. como o a seguir;
+
+
+    x = 'Nullam facilisis turpis ut placerat dictum; \nnullam auctor finibus ' 
+    \   'aliquet.'
+    print(x)
+    
+    Nullam facilisis turpis ut placerat dictum; 
+    nullam auctor finibus aliquet.
+
+
+Em textos que fazem o uso de aspas, seja elas simples ou duplas, devemos 
+mesclar o uso durante a atribuição da variável; Se o texto apresenta aspas 
+duplas, devemos declarar a variável com aspas simples, em caso de o texto 
+possuir aspas simples declaramos a variável com aspas duplas.
+
+    x = "Caixa d' agua"
+    y = 'Esse "texto" possui aspas duplas'
+
+Em casos onde o uso dos dois modelos de aspas são necessários no texto, 
+devemos utilizar a contra barra (alt+92 em teclados americanos); 
+Fazendo dessa forma o próximo caractere será interpretado como parte do 
+texto.    
+
+    x = 'Ele "encheu" a caixa d\' agua.'
+    print(x)
+    
+    Ele "encheu" a caixa d' agua.
+
+    OU
+    
+    x = "Ele \"encheu\" a caixa d' agua."
+    print(x)
+
+    Ele "encheu" a caixa d' agua.
+
+Caso seja necessário escrever um texto de múltiplas linhas uma outra forma 
+é através do uso de três aspas, seja simples ou duplas, lembrando que a que 
+for usada para iniciar a string deve ser usada para fechar;
+
+    
+    x = '''    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Phasellus a lacus orci. 
+        Sed accumsan tortor ligula, id blandit magna dignissim venenatis. 
+    Maecenas consequat risus quis efficitur commodo.'''
+    print(x)  
+    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Phasellus a lacus orci. 
+        Sed accumsan tortor ligula, id blandit magna dignissim venenatis. 
+    Maecenas consequat risus quis efficitur commodo.
+
+Durante o uso do modelo acima notamos que o resultado é apresentado da mesma 
+forma que no programa, o que retira a necessidade do uso de comandos 
+especiais para quebras de linhas por exemplo.
 """

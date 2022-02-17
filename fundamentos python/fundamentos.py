@@ -725,6 +725,20 @@ listas são mutáveis, o que permite uma manipulação maior de seus elementos;
     
     [1, 2, 3, 4]
 
+
+Durante o uso do operador '.append()' o novo elemento será incluído ao final 
+da lista, em momentos que queremos incluir em um local específico, usaremos 
+o operador '.insert()'; nos parâmetros dele iremos fornecer o índice onde o 
+novo item deve ficar e o segundo parâmetro deve ser o item a ser adicionado.
+
+
+    lista = [1, 2, 3]
+    lista.insert(1, 10)
+    print(lista)
+    
+    [1, 10, 2, 3]
+
+
 Continuando com a lista criada acima, vamos que não foi necessário salvar 
 novamente a lista com o item adicionado; podemos manipular essa lista de 
 outras formas, como retirar um item presente nessa lista.
@@ -760,6 +774,7 @@ usar apenas um tipo por lista.
     
 Em uma lista podemos ter também uma outra lista.
 
+
     lista = [1, 2, 3, ['Ana', 'Pedro', 'Paulo']]
 
 
@@ -784,8 +799,10 @@ conteúdo;
     1
     3.1415
     
-Podemos utilizar operadores de membros para verificar-mos se um item está na 
+    
+Podemos utilizar operadores membros para verificar-mos se um item está na 
 lista.
+
 
     lista = [1, 2, 3, 'Ana', 'Paula', 3.1415]
     print(2 in lista)
@@ -793,6 +810,44 @@ lista.
     
     True
     False
+
+
+Com o uso dos operadores membros podemos por exemplo passar os itens 
+presentes nas listas para letra maiúscula.
+
+
+    lista = ['ana', 'paula', 'pedro', 'rafael']
+    lista_nova = [item.upper() for item in lista]
+    print(lista_nova)
     
+    ['ANA', 'PAULA', 'PEDRO', 'RAFAEL']
+
+
+Para deletarmos elementos usando o índice como referência usando o operado 
+de membro 'del'
+
+
+    lista = ['ana', 'paula', 'pedro', 'rafael']    
+    del lista[2]
+    print(lista)
+    
+    ['ana', 'paula', 'rafael']
+
+
+Nas listas podemos acessar os elementos presentes nela através de um 
+intervalo definido. Lembrando que o primeiro parâmetro passado é referente 
+ao inicio do intervalo, esse início ele é inclusivo ou seja, o valor do 
+índice colocado nele será buscado; o segundo parâmetro é o final do 
+intervalo, ele é exclusivo sendo assim o índice colocado não será buscado, 
+buscando até o índice anterior; o terceiro parâmetro é a sequencia de busca 
+dos elementos, se não informado a busca será de um em um, layout do comando:
+lista[inicio:fim:sequência]; Se o valor da sequência for '-1' a lista será 
+buscada de forma inversa.
+
+
+    lista = ['ana', 'paula', 'pedro', 'rafael']
+    print(lista[1:3])
+ 
+    ['paula', 'pedro'] 
 """
 

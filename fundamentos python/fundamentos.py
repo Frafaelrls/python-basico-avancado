@@ -708,3 +708,58 @@ temos o mesmo comando utilizando como referência a letra 'e'.
 Percebemos que após a separação não recebemos como resultado a letra 'e'.
 """
 
+"""
+*** Listas ***
+
+As listas  também chamadas de array em outras linguagens, recebem um 
+conjunto de elementos que vão pertencer a um grupo que podem ser acessados a 
+pela sua posição na lista. Diferente de outras linguagens no Python as 
+listas são mutáveis, o que permite uma manipulação maior de seus elementos;
+
+
+    lista = [1, 2, 3]
+    
+    # Adicionando um item na lista.
+    lista.append(4)
+    print(lista)
+    
+    [1, 2, 3, 4]
+
+Continuando com a lista criada acima, vamos que não foi necessário salvar 
+novamente a lista com o item adicionado; podemos manipular essa lista de 
+outras formas, como retirar um item presente nessa lista.
+  
+  
+    lista = [1, 2, 3]
+    # Removendo o número 1
+    lista.remove(1)
+    print(lista)
+
+    [2, 3]
+ 
+    
+Removemos o elemento '1' e não o elemento de índice '1'.
+
+As listas em Python possuem a característica de heterogeneidade, com isso 
+podemos ter elementos de vários tipos em uma lista;
+
+
+    lista = [1, 2, 3, 'Ana', 'Paula']
+
+
+Devemos ter em mente que por mais que seja permitido o trabalho com listas 
+com tipos de ferentes, não é uma boa prática, para facilitar a compreensão 
+do código e interpretação de quais dados cada lista vai conter, recomenda-se 
+usar apenas um tipo por lista.
+
+
+    notas = [10.0, 8.75, 5.0]
+    nomes = ['Ana', 'Pedro', 'Paulo']
+    ID = [1, 2, 3]
+    
+    
+Em uma lista podemos ter também uma outra lista.
+
+    lista = [1, 2, 3, ['Ana', 'Pedro', 'Paulo']]
+    
+"""

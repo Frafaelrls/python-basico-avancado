@@ -748,7 +748,7 @@ podemos ter elementos de vários tipos em uma lista;
 
 
 Devemos ter em mente que por mais que seja permitido o trabalho com listas 
-com tipos de ferentes, não é uma boa prática, para facilitar a compreensão 
+com tipos deferentes, não é uma boa prática, para facilitar a compreensão 
 do código e interpretação de quais dados cada lista vai conter, recomenda-se 
 usar apenas um tipo por lista.
 
@@ -761,5 +761,38 @@ usar apenas um tipo por lista.
 Em uma lista podemos ter também uma outra lista.
 
     lista = [1, 2, 3, ['Ana', 'Pedro', 'Paulo']]
+
+
+Podemos verificar qual é o índice de um elemento em uma lista, usando o 
+operador '.index()' e fornecendo qual elemento buscamos.
+
+
+    lista = [1, 2, 3, 'Ana', 'Paula', 3.1415]
+    print(lista.index('Ana'))
+    
+    3    
+
+ 
+Sabendo os índices dos elementos podemos utiliza-los para acessar o seu 
+conteúdo;
+
+
+    lista = [1, 2, 3, 'Ana', 'Paula', 3.1415]
+    print(lista[0])
+    print(lista[-1])
+    
+    1
+    3.1415
+    
+Podemos utilizar operadores de membros para verificar-mos se um item está na 
+lista.
+
+    lista = [1, 2, 3, 'Ana', 'Paula', 3.1415]
+    print(2 in lista)
+    print(10 in lista)
+    
+    True
+    False
     
 """
+

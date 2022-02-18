@@ -851,3 +851,60 @@ buscada de forma inversa.
     ['paula', 'pedro'] 
 """
 
+"""
+*** Tuplas ***
+
+As tuplas vão armazenar diferentes tipos de dados em seus índices assim como 
+as listas, o que diferencia ela de listas é sua imutabilidade, uma vez 
+criada não podemos modifica-la, seja mudar os dados que estão em um índices, 
+seja trocar um dado para um determinado índice; 
+As tuplas serão usadas quando formos trabalhar com dados que não podem ser 
+modificados no decorrer do programa;
+
+A declaração das tuplas é realizada com seus itens separados por virgula entre 
+parênteses.
+
+
+    tupla = (1, 2, 3)
+    print(type(tupla))
+    
+    <class 'tuple'>
+
+
+A tupla pode receber elementos de diferentes tipos, assim como as listas; O 
+que difere nessa parte é a recomendação, enquanto em lista é recomendado 
+trabalhar com dado homogêneos as tuplas serão utilizadas com dados 
+heterogêneos;
+
+
+    tupla = (1, 2, 3, 'Um', 'Dois', 10.5, 9.5)
+    print(type(tupla))
+    print(tupla)  
+    
+    <class 'tuple'>
+    (1, 2, 3, 'Um', 'Dois', 10.5, 9.5)
+    
+
+Podemos utilizar a função 'tuple()' para converter um elemento em tupla.
+
+
+    nova_tupla = (tuple('Teste'))
+    print(nova_tupla)
+    
+    ('T', 'e', 's', 't', 'e')
+    
+Se tivermos dentro de uma tupla uma lista de dados os dados que essa lista 
+contem pode ser modificados, alista não pode ser excluída ou movimentada de 
+índice na tupla.
+
+
+    tupla = (1, 2, 3, ['Um', 'Dois'], 10.5, 9.5)
+    print(f'Antes de modificar: {tupla[3][1]}')
+    tupla[3][1] = "Tres"
+    print(f'Após modificar: {tupla[3][1]}')
+
+    Antes de modificar: Dois
+    Após modificar: Tres
+
+"""
+

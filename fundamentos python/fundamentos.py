@@ -949,5 +949,61 @@ chave buscada não exista no dicionário.
     
     Chave não encontrada
     
+    
+O dicionário é mutável, o que nos proporciona a possibilidade de manipulação 
+de seus dados;
 
+
+    # Podemos modificar o valor da chave;
+    
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    pessoa['idade'] = 40
+    print(pessoa)
+    
+    {'nome': 'Ana', 'idade': 40, 'cursos': ['React', 'Python']}
+    
+    
+    # Podemos adicionar um novo elemento em uma lista dentro de um dicionário;
+    
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    pessoa['cursos'].append('Angular')
+    print(pessoa)
+    
+    {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python', 'Angular']}
+    
+    
+    # Podemos ler um valor e retirar ele do dicionário após a leitura;
+     
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    print(pessoa.pop('idade'))
+    print(pessoa)         
+    
+    38
+    {'nome': 'Ana', 'cursos': ['React', 'Python']}
+    
+    
+    # Podemos adicionar uma nova chave ao dicionário;
+    
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    pessoa.update({'sexo': 'F'})
+    print(pessoa)   
+    
+    {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python'], 'sexo': 'F'}
+    
+    
+    # Podemos deletar uma chave;
+    
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    del pessoa['cursos']
+    print(pessoa) 
+    
+    {'nome': 'Ana', 'idade': 38}  
+    
+    # Podemos limpar o dicionário, apagando as chaves;
+    
+    pessoa = {'nome': 'Ana', 'idade': 38, 'cursos': ['React', 'Python']}
+    pessoa.clear()
+    print(pessoa)    
+    
+    {}
 """

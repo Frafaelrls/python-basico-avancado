@@ -905,6 +905,49 @@ contem pode ser modificados, alista não pode ser excluída ou movimentada de
 
     Antes de modificar: Dois
     Após modificar: Tres
-
 """
 
+"""
+*** Dicionário ***
+
+Assim como os dicionários que utilizamos no dia a dia, os dicionários em 
+Python vão conter uma chave e um significado para essa chave, as chaves 
+devem ser únicas e comumente é utilizados strings como chaves;
+
+
+    dicionario = {'nome': 'Ana', 'idade': 32, 'peso': 55.6}
+    print(type(dicionario))
+    
+    <class 'dict'>
+
+
+Para acessarmos os valores referente as chaves devemos informar exatamente o 
+valor da chave;
+
+
+    dicionario = {'nome': 'Ana', 'idade': 32, 'peso': 55.6}
+    print(dicionario['nome'])
+    
+    Ana
+
+Uma outra forma que podemos utilizar para buscar valores é utilizando o 
+operador '.get()';
+
+
+    dicionario = {'nome': 'Ana', 'idade': 32, 'peso': 55.6}
+    print(dicionario.get('idade'))
+    
+    32
+    
+
+Com o operador '.get()' podemos configurar uma resposta padrão para caso a 
+chave buscada não exista no dicionário.
+
+
+    dicionario = {'nome': 'Ana', 'idade': 32, 'peso': 55.6}
+    print(dicionario.get('Altura', 'Chave não encontrada'))
+    
+    Chave não encontrada
+    
+
+"""

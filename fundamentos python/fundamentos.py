@@ -1032,7 +1032,7 @@ Podemos criar um conjunto utilizando a função 'set()'.
 Notamos acima que com a criação de um conjunto foi retirado as letras 
 repetem; outra característica que podemos verificar é a não ordenação dos 
 itens, se executarmos essas linhas de códigos outra vez, vamos obter um 
-resultado de saida com os valores reordenados.
+resultado de saída com os valores reordenados.
 
 
     a = set('Isso é um conjunto')
@@ -1140,5 +1140,72 @@ Podemos fazer mais conferências e operações  utilizando os conjuntos.
     
     {1, 4, 5, 6}
      
+"""
 
+"""
+*** Interpolação *** 
+
+
+Podemos substituir elementos do tipo string por valores salvos em variáveis;
+Abaixo seguem os modo que podemos fazer essa interpolação, indo do menos usual 
+para o mais usual;
+
+
+    nome = 'Ana'
+    idade = 30
+
+    print('Nome: %s Idade %d' % (nome, idade))
+
+    Nome: Ana Idade 30
+
+No exemplo acima vemos a versão mais antiga de uso da interpolação onde 
+devemos indicar onde será substituído os valores e quais os tipos de valores 
+que serão usados;
+
+    Tipos:
+            %s = string
+            %d = int
+            %f = float
+            %r = Boolean
+            
+    Limitadores:
+            %.2f = limita em 2 casas decimais
+
+
+O segundo modo é o apresentado a baixo, ele é utilizado comumente por 
+usuários que trabalham com a verão do Python menor que 3.6.
+            
+            
+    nome = 'Ana'
+    idade = 30
+
+    print('Nome: {0} Idade: {1}'.format(nome, idade))            
+            
+    Nome: Ana Idade: 30            
+
+
+O terceiro modo é utilizando a biblioteca string; Esse serve apenas de 
+demonstrativo, não sendo utilizado no dia a dia.
+
+    from string import Template
+
+    nome = 'Ana'
+    idade = 30
+
+    s = Template('Nome: $nome Idade: $idade')
+    print(s.substitute(nome=nome, idade=idade))
+    
+    Nome: Ana Idade: 30
+
+
+O quarto modo e o mais usual é o que vem a seguir; colocando o 'f' para 
+indicar que aquela string será formatada e adicionado os valores das 
+variáveis. Esse modo está presente a partir do Python versão 3.6; 
+
+    nome = 'Ana'
+    idade = 30
+    
+    print(f'Nome: {nome} Idade: {idade}')
+    
+    Nome: Ana Idade: 30                 
 """

@@ -1007,3 +1007,138 @@ de seus dados;
     
     {}
 """
+
+"""
+*** Conjuntos ***
+
+O conjunto ou 'set' em inglês é delimitado por chaves; Suas principais 
+características são:
+
+
+    - Seus itens não são indexados.
+    - Não há garantia de ordem de inserção de itens.
+    - Não aceitam repetição de itens, ignorando os itens repetidos.
+   
+
+Podemos criar um conjunto utilizando a função 'set()'.
+
+
+    a = set('Isso é um conjunto')
+    print(a)
+    
+    {'o', 'I', 'n', 's', ' ', 'u', 'c', 'é', 'm', 'j', 't'}
+  
+ 
+Notamos acima que com a criação de um conjunto foi retirado as letras 
+repetem; outra característica que podemos verificar é a não ordenação dos 
+itens, se executarmos essas linhas de códigos outra vez, vamos obter um 
+resultado de saida com os valores reordenados.
+
+
+    a = set('Isso é um conjunto')
+    print(a)
+
+    {'I', 't', 'o', 'é', 'u', 'c', 's', 'n', 'j', 'm', ' '}
+
+
+Podemos utilizar os operadores de membros, para verificarmos se um valor 
+está presente ou não em um conjunto.
+
+
+    a = {1, 2, 3}
+    print(3 in a, 4 not in a)
+    
+    True True
+        
+A comparação entre conjuntos pode ser realizada;
+
+
+    a = {1, 2, 3}
+    b = {3, 2, 1, 3}
+    print(a == b)
+
+    True
+    
+    
+No exemplo acima temos outra confirmação de como trabalha os conjuntos, 
+devido uma das propriedades do set ser ignorar os itens repetidos e a ordem 
+dos elementos não são importantes com isso os dois conjuntos serão 
+considerados iguais.
+
+    
+Podemos fazer mais conferências e operações  utilizando os conjuntos.
+    
+    
+    - União de dois conjuntos, nesse exemplo é criado um terceiro conjunto 
+    com o resultado.
+    
+    a = {1, 2}
+    b = {2, 3}
+    print(a.union(b))
+
+    {1, 2, 3}
+    
+    
+    - Atualizando um conjunto com outro conjunto, exemplo os valores de um 
+    conjunto serão modificados, diferente do operador '.union()'
+    
+    a = {1, 2}
+    b = {2, 3}
+    a.update(b)
+    print(a)
+    
+    {1, 2, 3}   
+    
+     
+    
+    - Intercessão de dois conjuntos
+    
+    a = {1, 2}
+    b = {2, 3}
+    print(a.intersection(b))
+    
+    {2}
+    
+    - Verificação se um conjunto é subconjunto de outro; 
+    'b' é subconjunto de 'a'? False 
+    
+
+    a = {1, 2}
+    b = {2, 3}    
+    print(b <= a)
+    
+    False 
+    
+    - Verificação se um conjunto contem outro conjunto; 
+    'a' contem 'b'? True
+    
+    a = {1, 2, 3, 4, 5, 6}
+    b = {2, 3, 4}
+    print(a >= b)
+    
+    True
+    
+    
+    - Pode-se buscar a diferença entre dois conjuntos;
+    
+    a = {1, 2, 3, 4, 5, 6}
+    b = {2, 3, 4}
+    print(a - b)
+    
+    {1, 5, 6}
+    
+    - Pode-se fazer uma atribuição subtrativa, onde será verificado a 
+    igualdade entre dois conjuntos e retirando os valores que existe nos 
+    dois conjuntos e atribuindo o valor em um conjunto;
+    Retire os valores iguais em 'a' e 'b' atribuída em 'a' o resultado dessa 
+    operação.
+    
+    a = {1, 2, 3, 4, 5, 6, 3, 2}
+    b = {2, 3, 10}
+    a -= b
+    print(a)
+    
+    {1, 4, 5, 6}
+     
+
+"""

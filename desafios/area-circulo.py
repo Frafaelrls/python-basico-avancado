@@ -1,6 +1,7 @@
 import math
 import os
 import sys
+import errno
 
 
 def circulo(raio):
@@ -8,11 +9,16 @@ def circulo(raio):
     return pi * raio ** 2
 
 
+def alerta():
+    print(f"É necessário informar o raio do circulo.\n"
+          f"syntax: {sys.argv[0][-15:]} <raio>")
+    os.system('pause')
+    sys.exit(errno.EPERM)
+
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print(f"É necessário informar o raio do circulo\n"
-              f"syntax: {sys.argv[0]} <raio>")
-        os.system('pause')
+        alerta()
     else:
         entrada = sys.argv[1]
         entrada = float(entrada)

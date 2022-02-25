@@ -1,5 +1,6 @@
 import math
 import os
+import sys
 
 
 def circulo(raio):
@@ -8,7 +9,7 @@ def circulo(raio):
 
 
 if __name__ == '__main__':
-    entrada = input('Insira o raio do circulo em cm\n')
+    entrada = sys.argv[1]
     entrada = float(entrada)
     area = circulo(entrada)
     area = format(area, '.2f')

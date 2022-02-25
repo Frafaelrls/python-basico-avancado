@@ -2,6 +2,13 @@ import math
 import os
 import sys
 import errno
+import colorama
+
+
+class TerminalColor:
+    colorama.init()
+    verm = '\033[91m'
+    normal = '\033[0m'
 
 
 def circulo(raio):
@@ -21,7 +28,8 @@ if __name__ == '__main__':
         sys.exit(errno.EPERM)
     elif not sys.argv[1].isnumeric():
         alerta()
-        print('O raio deve ser um valor numérico.')
+        print(TerminalColor.verm + 'O raio deve ser um valor numérico.' +
+              TerminalColor.normal)
         os.system('pause')
 
     else:

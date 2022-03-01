@@ -47,3 +47,9 @@ if 1.1 <= nota <= 2.0:
 
 if 0.0 <= nota <= 1.0:
     print('O aluno está com o conceito: E-')
+
+if nota >= 10.1:
+    print('Nota inválida')
+
+if nota <= -0.9:
+    print('Nota Inválida')

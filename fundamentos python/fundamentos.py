@@ -1209,3 +1209,20 @@ variáveis. Esse modo está presente a partir do Python versão 3.6;
     
     Nome: Ana Idade: 30                 
 """
+
+"""
+*** Contantes ***
+
+Por convenção quando criamos uma constante no Python, devemos usar letras 
+maiúsculas para sinalizar que é uma constante. 
+
+
+    CONSTANTE = 3.14
+    print(CONSTANTE)
+    
+    3.14
+
+
+Ainda será possível modificar e substituir os valores, o objetivo de usar em 
+letras maiúscula é facilitar a compreensão do código. 
+"""

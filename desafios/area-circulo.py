@@ -1,7 +1,8 @@
+import errno
 import math
 import os
 import sys
-import errno
+
 import colorama
 
 

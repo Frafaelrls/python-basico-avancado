@@ -12,7 +12,7 @@ salario = float(input(f"Informe o seu salário\n"))
 gasto = float(input(f"Informe o seu gasto\n"))
 
 porcentagem = gasto / salario
-# round(x,y) função responsável por arredondar o a quantidade de casas decimais
+# round(x,y) função responsável por arredondar a quantidade de casas decimais
 # print(f"O seu gasto corresponde a {round(porcentagem *100,2)}%")
 # Segunda forma que pode-se limitar
 print(f"O seu gasto corresponde a {'{:.2f}'.format(porcentagem * 100)}")

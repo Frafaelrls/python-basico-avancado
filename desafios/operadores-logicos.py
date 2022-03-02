@@ -4,10 +4,10 @@ Operadores lógicos
 Descrição
 Criar um programa de validação de atividades realizadas e com base nessa
 validação gerar novas atividades, deve-se verificar se o trabalho foi
-realizado ou não nos dias da semana 'terça' e 'quinta'; se as duas
+realizado ou não nos dias da semana 'terça' e 'quinta'; se às duas
 atividades forem realizadas será comprado uma TV de 50' mais um sorvete; se
 a penas uma atividade for realizada, será comprado uma TV de 32' mais um
-sorvete; se nenhuma das atividades for realizadas não será comprado nenhum
+sorvete; se nenhuma das atividades foram realizadas não será comprado nenhum
 dos objetos.
 
 Mapa verdade

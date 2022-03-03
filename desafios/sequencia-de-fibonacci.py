@@ -22,6 +22,19 @@ if __name__ == '__main__':
     fibonacci(100)
 
 
+def fibonacci_packing(limite):
+    penultimo = 0
+    ultimo = 1
+    print(f'{penultimo},{ultimo}', end=',')
+    while limite > ultimo:
+        penultimo, ultimo = ultimo, penultimo + ultimo
+        print(ultimo, end=',')
+
+
+if __name__ == '__main__':
+    fibonacci_packing(100)
+
+
 def fibonacci_list(limite):
     resultado = [0, 1]
     # Enquanto o último item da lista for menor que o limite

@@ -7,11 +7,11 @@ Assim, após 0 e 1, vêm 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, etc
 """
 
 
-def fibonacci():
+def fibonacci(limite):
     penultimo = 0
     ultimo = 1
     print(f'{penultimo},{ultimo}', end=',')
-    while True:
+    while limite > ultimo:
         proximo = penultimo + ultimo
         print(proximo, end=',')
         penultimo = ultimo
@@ -19,4 +19,4 @@ def fibonacci():
 
 
 if __name__ == '__main__':
-    fibonacci()
+    fibonacci(10000)

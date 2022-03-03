@@ -45,7 +45,7 @@ def fibonacci_list(limite):
 
 
 if __name__ == '__main__':
-    for fib in fibonacci_list(100):
+    for fib in fibonacci_list(10):
         print(fib)
 
 
@@ -58,7 +58,7 @@ def fibonacci_sum(limite):
 
 
 if __name__ == '__main__':
-    for fib in fibonacci_sum(100):
+    for fib in fibonacci_sum(10):
         print(fib)
 
 
@@ -74,4 +74,16 @@ def fibonacci_quantidade(quatidade):
 
 if __name__ == '__main__':
     for fib in fibonacci_quantidade(10):
+        print(fib)
+
+
+def fibonacci_for(quatidade):
+    resultado = [0, 1]
+    for i in range(2, quatidade):
+        resultado.append(sum(resultado[-2:]))
+    return resultado
+
+
+if __name__ == '__main__':
+    for fib in fibonacci_for(20):
         print(fib)

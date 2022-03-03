@@ -19,4 +19,18 @@ def fibonacci(limite):
 
 
 if __name__ == '__main__':
-    fibonacci(10000)
+    fibonacci(100)
+
+
+def fibonacci_list(limite):
+    resultado = [0, 1]
+    # Enquanto o último item da lista for menor que o limite
+    while resultado[-1] < limite:
+        # Soma os dois últimos itens da lista e adiciona na lista
+        resultado.append(resultado[-2] + resultado[-1])
+    return resultado
+
+
+if __name__ == '__main__':
+    for fib in fibonacci_list(100):
+        print(fib)

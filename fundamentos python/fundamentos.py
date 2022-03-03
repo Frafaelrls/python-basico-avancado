@@ -1211,7 +1211,7 @@ variáveis. Esse modo está presente a partir do Python versão 3.6;
 """
 
 """
-*** Contantes ***
+*** Constantes ***
 
 Por convenção quando criamos uma constante no Python, devemos usar letras 
 maiúsculas para sinalizar que é uma constante. 
@@ -1225,4 +1225,62 @@ maiúsculas para sinalizar que é uma constante.
 
 Ainda será possível modificar e substituir os valores, o objetivo de usar em 
 letras maiúscula é facilitar a compreensão do código. 
+"""
+
+"""
+*** Recursividade *** 
+
+É um método onde uma função chama a si mesmo, conforme exemplo abaixo:
+
+
+    def imprimir(maximo, atual):
+        if atual < maximo:
+            print(atual)
+            imprimir(maximo, atual + 1)
+
+
+    imprimir(10, 1)
+
+
+No exemplo temos uma função que imprime um valor e efetua a soma do valor 
+atual mais 1 e logo após chama novamente a mesma função com os novos 
+valores, até que o método de parada seja atingido, onde o valor atual será 
+maior que o valor máximo.
+
+Devemos saber que existe um limite de segurança para que possamos utilizar 
+esse loop.
+
+
+    def imprimir(maximo, atual):
+        if atual < maximo:
+            print(atual)
+            imprimir(maximo, atual + 1)
+
+
+    imprimir(10000, 1)  
+
+
+No exemplo acima, pedimos um limite de 10000, nesse momento será gerado um 
+erro de recursividade (RecursionError) avisando que foi excedido o limite 
+máximo que o python pode repetir uma função.
+
+Podemos ver esse limite usando o seguinte comando.
+
+
+    import sys
+    
+    print(sys.getrecursionlimit())
+    
+    1000
+
+
+Esse limite pode ser mudado caso seja necessário, não sendo recomendado a 
+mudança dos valores padrões, a recomendação é modificar o programa com uma 
+lógica melhor que possa trabalhar sem o uso de recursividade; o método usado 
+para alterar o limite segue abaixo:
+
+    import sys
+    # Alterando para 1500 o limite
+    sys.setrecursionlimit(1500)
+    
 """

@@ -19,7 +19,7 @@ def fibonacci(limite):
 
 
 if __name__ == '__main__':
-    fibonacci(100)
+    fibonacci(10)
 
 
 def fibonacci_packing(limite):
@@ -32,7 +32,7 @@ def fibonacci_packing(limite):
 
 
 if __name__ == '__main__':
-    fibonacci_packing(100)
+    fibonacci_packing(10)
 
 
 def fibonacci_list(limite):
@@ -46,4 +46,17 @@ def fibonacci_list(limite):
 
 if __name__ == '__main__':
     for fib in fibonacci_list(100):
+        print(fib)
+
+
+def fibonacci_sum(limite):
+    resultado = [0, 1]
+    while resultado[-1] < limite:
+        # Soma os dois itens da lista e adiciona o resultado à lista
+        resultado.append(sum(resultado[-2:]))
+    return resultado
+
+
+if __name__ == '__main__':
+    for fib in fibonacci_sum(100):
         print(fib)

@@ -60,3 +60,18 @@ def fibonacci_sum(limite):
 if __name__ == '__main__':
     for fib in fibonacci_sum(100):
         print(fib)
+
+
+def fibonacci_quantidade(quatidade):
+    resultado = [0, 1]
+    while True:
+        resultado.append(sum(resultado[-2:]))
+        # Se o comprimento da lista for igual ao informado, pare
+        if len(resultado) == quatidade:
+            break
+    return resultado
+
+
+if __name__ == '__main__':
+    for fib in fibonacci_quantidade(10):
+        print(fib)

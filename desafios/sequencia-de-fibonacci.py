@@ -87,3 +87,15 @@ def fibonacci_for(quatidade):
 if __name__ == '__main__':
     for fib in fibonacci_for(20):
         print(fib)
+
+
+def fibonacci_recursiva(quatidade, sequencia=(0, 1)):
+    # Colocando a função de parada
+    if len(sequencia) == quatidade:
+        return sequencia
+    return fibonacci_recursiva(quatidade, sequencia + (sum(sequencia[-2:]),))
+
+
+if __name__ == '__main__':
+    for fib in fibonacci_recursiva(20):
+        print(fib)
